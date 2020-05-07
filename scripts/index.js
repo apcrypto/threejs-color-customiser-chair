@@ -4,28 +4,27 @@ var loaded = false;
 const TRAY = document.getElementById("js-tray-slide");
 const colors = [
   {
-    texture: "https://s3-us-west-2.amazonaws.com/s.cdpn.io/1376484/wood_.jpg",
+    texture: "./assets/wood_.jpg",
     size: [2, 2, 2],
     shininess: 60
   },
   {
-    texture: "https://s3-us-west-2.amazonaws.com/s.cdpn.io/1376484/fabric_.jpg",
+    texture: "./assets/fabric_.jpg",
     size: [4, 4, 4],
     shininess: 0
   },
   {
-    texture:
-      "https://s3-us-west-2.amazonaws.com/s.cdpn.io/1376484/pattern_.jpg",
+    texture: "./assets/pattern_.jpg",
     size: [8, 8, 8],
     shininess: 10
   },
   {
-    texture: "https://s3-us-west-2.amazonaws.com/s.cdpn.io/1376484/denim_.jpg",
+    texture: "./assets/denim_.jpg",
     size: [3, 3, 3],
     shininess: 0
   },
   {
-    texture: "https://s3-us-west-2.amazonaws.com/s.cdpn.io/1376484/quilt_.jpg",
+    texture: "./assets/quilt_.jpg",
     size: [6, 6, 6],
     shininess: 0
   },
@@ -355,6 +354,7 @@ function buildColors(colors) {
 
     if (color.texture) {
       swatch.style.backgroundImage = "url(" + color.texture + ")";
+      console.log(color.texture);
     } else {
       swatch.style.background = "#" + color.color;
     }
